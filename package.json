@@ -1,0 +1,27 @@
+{
+  "name": "catalogo-de-jogos",
+  "version": "1.0.0",
+  "description": "Site voltado em adicionar seus jogos favoritos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BragaJoao/catalogo-de-jogos.git"
+  },
+  "author": "João Guilherme Braga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BragaJoao/catalogo-de-jogos/issues"
+  },
+  "homepage": "https://github.com/BragaJoao/catalogo-de-jogos#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
