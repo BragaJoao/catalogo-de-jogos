@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <%- include('./components/head') %>
+
+<body>
+    <%- include('./components/nav') %>
+
+    <main>
+
+        <section class="details">
+
+            <img src="<%=games.imagem %>" alt="img">
+
+
+            <div>
+                <h1>
+                    <%=games.nome %>
+                </h1>
+
+
+                <article>
+                    <%=games.descricao %>
+                </article>
+                <a class="editar" href="/edit/<%= games.id %>">Editar</a>
+                <a class="apagar" href="/delete/<%= games.id %>">Deletar</a>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('./components/footer') %>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

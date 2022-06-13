@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./components/head') %>
+
+  <body>
+    <%- include('./components/nav') %> 
+
+    <main>
+        <div class="container">
+            <% if(message !="" ) { %>
+            <section id="message">
+                 <p><%= message %></p>
+                <span id="close">&times;</span>
+                </section>
+            <% } %>
+            <form method="POST" action="/delete/<%= games.id %>">
+                <div class="item">
+                    <h2>Dejesa realmente deletar?</h2>
+                    <span class="delecao"> <%= games.nome %> 
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="<%= games.imagem %>" alt="capa do game">
+                </div>
+                <div class="item">
+                    <a href="/jogo/<%= games.id %>" class="cancelar">Cancelar</a>
+                    <button type="submit">Confirmar Exclusão</button>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+
+    <%- include('./components/footer') %>
+    <script src="/js/script.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <%- include('./components/head') %>
+
+<body>
+    <%- include('./components/nav') %>
+
+    <% if(message !="" ) { %>
+        <section id="message">
+            <p>
+                <%= message %>
+            </p> <span id="close">&times;</span>
+        </section>
+    <% } %>
+
+    <main>
+        <section id="cards">
+            <% catalogo.forEach((games)=>{ %>
+                <div class="card">
+                    <img src="<%= games.imagem %>" alt="">
+                    <a class="inf" href="/jogo/<%= games.id %>">Informações</a>
+                </div>
+                <% }) %>
+        </section>
+    </main>
+
+
+    <%- include('./components/footer') %>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
