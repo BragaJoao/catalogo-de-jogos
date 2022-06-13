@@ -107,7 +107,7 @@ const deletar = async (req,res) => {
         });
       }
       res.render("delete", {
-        games, message:"",
+        games, message:"Jogo deletado com sucesso.",
       });
     }catch (err) {
       res.status(500).send({ err: err.message });

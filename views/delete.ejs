@@ -18,14 +18,17 @@
                     <h2>Dejesa realmente deletar?</h2>
                     <span class="delecao"> <%= games.nome %> 
                     </span>
+
+                    <div class="item">
+                        <a href="/jogo/<%= games.id %>" class="cancelar">Cancelar</a>
+                        <button type="submit">Confirmar Exclusão</button>
+                    </div>
+                    
                 </div>
                 <div class="item">
                     <img src="<%= games.imagem %>" alt="capa do game">
                 </div>
-                <div class="item">
-                    <a href="/jogo/<%= games.id %>" class="cancelar">Cancelar</a>
-                    <button type="submit">Confirmar Exclusão</button>
-                </div>
+
                 
             </form>
         </div>
