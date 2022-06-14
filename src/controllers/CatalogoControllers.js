@@ -7,6 +7,10 @@ const getAll = async (req, res) => {
   try {
     //tente por esse caminho se der certo
     const catalogo = await Jogo.findAll(); //aguardando
+    setTimeout(() => {
+        message = "";
+      }, 1000);
+
     res.render("index", {
       catalogo,
       catalogoPut: null,
@@ -52,6 +56,7 @@ const getById = async (req, res) => {
     const games = await Jogo.findByPk(req.params.id); //encontrando o jogo que foi escolhido pelo id, findByPk procurar pela chave primaria que é o id, e esse id vai chegar por parametro.
     res.render("details", {
       games,
+      message
     });
   } catch (err) {
     //deu erro, venha nesse caminho
@@ -88,6 +93,8 @@ const editar = async (req, res) => {
       games.imagem = imagem;
   
       const jogoEditado = await games.save();
+
+      
       res.redirect("/");
     } catch (err) {
      

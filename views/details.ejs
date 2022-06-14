@@ -23,7 +23,9 @@
                     <%=games.descricao %>
                 </article>
                 <a class="editar" href="/edit/<%= games.id %>">Editar</a>
-                <a class="apagar" href="/delete/<%= games.id %>">Deletar</a>
+                <form method="POST" action="/delete/<%= games.id %>">
+                <button class="apagar" type="submit">Deletar</button>
+                </form>
             </div>
         </section>
 

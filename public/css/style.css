@@ -203,7 +203,7 @@ section.details div a.editar {
     margin-top: .75rem;
   }
 
-  section.details div a.apagar {
+  section.details div button.apagar {
     padding: 0.7rem;
     width: 40%;
     display: flex;
@@ -219,6 +219,7 @@ section.details div a.editar {
     text-decoration: none;
     margin-top: .75rem;
     margin-bottom: .75rem;
+    border: none;
   }
 
   section.details div a.editar:hover {
@@ -226,7 +227,7 @@ section.details div a.editar {
     color: black;
   }
 
-  section.details div a.apagar:hover {
+  section.details div button.apagar:hover {
     background-color: #77fd77;
     color: black;
   }
