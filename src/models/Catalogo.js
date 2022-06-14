@@ -33,4 +33,9 @@ const Jogo = database.sequelize.define(
     }
 );
 
+const initTable = async () => {
+    await Jogo.sync();
+};
+initTable();
+
 module.exports = Jogo;
